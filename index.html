@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMKD Jakarta Raya | Beranda</title>
+    <meta name="description" content="Portal resmi Forum Mahasiswa Kedinasan Daerah (FMKD) Jakarta Raya Periode 2026/2027.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Nunito:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="logo">
+            <i class="ti ti-crown"></i>
+            <span>FMKD JR</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="visi-misi.html">Visi & Misi</a></li>
+            <li><a href="kepengurusan.html">Kepengurusan</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <button class="hamburger" id="hamburger"><i class="ti ti-menu-2"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-content fade-in">
+                <div class="hero-badge">Resmi Ditetapkan – 8 April 2026</div>
+                <h1 class="hero-title">Forum Mahasiswa Kedinasan Daerah Jakarta Raya</h1>
+                <p class="hero-subtitle">Periode 2026/2027 – Bersatu, Berinovasi, Berkarya untuk Indonesia</p>
+                
+                <div class="hero-buttons">
+                    <a href="tentang.html" class="btn btn-primary">Kenali Kami <i class="ti ti-arrow-right"></i></a>
+                    <a href="kepengurusan.html" class="btn btn-outline">Lihat Kepengurusan</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="40">0</span>
+                        <span class="stat-label">Pengurus</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="4">0</span>
+                        <span class="stat-label">Divisi DPD</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="10">0</span>
+                        <span class="stat-label">PTK Tergabung</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accent Line -->
+        <div class="accent-line"></div>
+        
+        <!-- Artikel Berita Section (Preview) -->
+        <section class="container">
+            <h2 class="section-title fade-in">Kabar Terkini</h2>
+            <p class="section-subtitle fade-in">Informasi dan Kegiatan Terbaru FMKD Jakarta Raya</p>
+            
+            <div class="news-grid fade-in">
+                <article class="glass-card news-card">
+                    <div class="news-img-placeholder">
+                        <i class="ti ti-users"></i>
+                        <span class="news-category cat-organisasi">Organisasi</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="ti ti-calendar-event"></i> 8 April 2026</span>
+                        <h3 class="news-title">Pelantikan Pengurus DPD FMKD Jakarta Raya Periode 2026/2027</h3>
+                        <a href="berita.html" class="news-readmore">Baca Selengkapnya <i class="ti ti-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="glass-card news-card">
+                    <div class="news-img-placeholder">
+                        <i class="ti ti-file-text"></i>
+                        <span class="news-category cat-administrasi">Administrasi</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="ti ti-calendar-event"></i> 5 April 2026</span>
+                        <h3 class="news-title">FMKD Jakarta Raya Resmi Sahkan AD/ART Baru Tahun 2026</h3>
+                        <a href="berita.html" class="news-readmore">Baca Selengkapnya <i class="ti ti-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="glass-card news-card">
+                    <div class="news-img-placeholder">
+                        <i class="ti ti-user-plus"></i>
+                        <span class="news-category cat-rekrutmen">Rekrutmen</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="ti ti-calendar-event"></i> 1 Maret 2026</span>
+                        <h3 class="news-title">Open Recruitment Pengurus FMKD Jakarta Raya Resmi Dibuka</h3>
+                        <a href="berita.html" class="news-readmore">Baca Selengkapnya <i class="ti ti-chevron-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;" class="fade-in">
+                <a href="berita.html" class="btn btn-outline">Lihat Semua Berita</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="ti ti-crown"></i>
+                        <span>FMKD JAKARTA RAYA</span>
+                    </div>
+                    <p>Wadah komunikasi, koordinasi, dan kolaborasi bagi mahasiswa perguruan tinggi kedinasan di wilayah Jakarta Raya.</p>
+                    <ul class="sk-list">
+                        <li><i class="ti ti-certificate"></i> SK DPD: SKep-1-DPDFMKDJR-IV-007-Tahun 2026</li>
+                        <li><i class="ti ti-certificate"></i> SK Dewas: SKep-1-DEWASFMKDJR-IV-003-Tahun 2026</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="berita.html">Berita Organisasi</a></li>
+                        <li><a href="tentang.html">Tentang FMKD</a></li>
+                        <li><a href="kepengurusan.html">Struktur Pengurus</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Informasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">AD/ART Organisasi</a></li>
+                        <li><a href="#">Program Kerja</a></li>
+                        <li><a href="#">Dokumen Publik</a></li>
+                        <li><a href="kontak.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 FMKD Jakarta Raya. Periode 2026/2027. "Bersatu dalam Kedinasan, Berkarya untuk Indonesia"</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
