@@ -8,11 +8,12 @@ if ($is_local) {
     $password = '';
     $dbname = 'fmkdjr_db'; // Sesuaikan jika nama database lokal Anda berbeda
 } else {
-    // Konfigurasi untuk Hosting (InfinityFree)
-    $host = 'sql301.infinityfree.com';
-    $username = 'if0_41970186';
-    $password = 'fmkdjr2026';
-    $dbname = 'if0_41970186_dbfmkd';
+    // Konfigurasi untuk Vercel (TiDB Cloud Serverless)
+    $host = 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com';
+    $port = '4000';
+    $username = '3Dbxxa2uKAyfC2z.root';
+    $password = 'aIVQD0pDDemkzliO';
+    $dbname = 'test'; // Gunakan database bawaan 'test' di TiDB
 }
 
 try {
@@ -22,9 +23,10 @@ try {
         $pdo->exec("CREATE DATABASE IF NOT EXISTS `$dbname`");
         $pdo->exec("USE `$dbname`");
     } else {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password, [
-            PDO::ATTR_TIMEOUT => 3,
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4", $username, $password, [
+            PDO::ATTR_TIMEOUT => 5,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false // Dibutuhkan untuk TiDB Serverless
         ]);
     }
 
