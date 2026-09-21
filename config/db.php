@@ -12,7 +12,7 @@ if ($is_local) {
     $host = 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com';
     $port = '4000';
     $username = '3Dbxxa2uKAyfC2z.root';
-    $password = 'aIVQD0pDDemkzliO';
+    $password = 'QUjfEds73sAoJzDd';
     $dbname = 'test'; // Gunakan database bawaan 'test' di TiDB
 }
 
@@ -26,7 +26,7 @@ try {
         $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4", $username, $password, [
             PDO::ATTR_TIMEOUT => 5,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::MYSQL_ATTR_SSL_CA => '/etc/ssl/certs/ca-certificates.crt'
+            PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
         ]);
     }
 
