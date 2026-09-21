@@ -26,6 +26,7 @@ try {
         $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4", $username, $password, [
             PDO::ATTR_TIMEOUT => 5,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::MYSQL_ATTR_SSL_CA => __DIR__ . '/cacert.pem',
             PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
         ]);
     }
