@@ -22,8 +22,10 @@ try {
         $pdo->exec("CREATE DATABASE IF NOT EXISTS `$dbname`");
         $pdo->exec("USE `$dbname`");
     } else {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password, [
+            PDO::ATTR_TIMEOUT => 3,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        ]);
     }
 
     // Tabel pesan_kontak
