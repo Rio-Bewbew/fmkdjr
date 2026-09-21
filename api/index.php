@@ -23,6 +23,7 @@ try {
         http_response_code(404);
         echo "404 Not Found";
     }
+    }
 } catch (Throwable $e) {
     http_response_code(500);
     echo "<h1>PHP Error!</h1>";
