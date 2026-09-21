@@ -1,10 +1,10 @@
 {
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.9.0",
-      "includeFiles": "**/*.{php,html,css,js}"
+  "builds": [
+    {
+      "src": "api/index.php",
+      "use": "vercel-php@0.9.0"
     }
-  },
+  ],
   "routes": [
     { "src": "/css/(.*)", "dest": "/css/$1" },
     { "src": "/js/(.*)", "dest": "/js/$1" },
