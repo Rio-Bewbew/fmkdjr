@@ -1,12 +1,15 @@
 <?php
-// Mengubah direktori kerja ke folder utama (root) agar relative include seperti 'components/header.php' tetap berfungsi.
-chdir(__DIR__ . '/..');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-$request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+try {
+    chdir(__DIR__ . '/..');
 
-if ($request_uri === '/' || $request_uri === '') {
-    require 'index.php';
-} else {
+    $request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+    if ($request_uri === '/' || $request_uri === '') {
+        require 'index.php';
+    } else {
     // Hilangkan slash di awal untuk mencocokkan path file lokal
     $file = ltrim($request_uri, '/');
     
@@ -20,4 +23,9 @@ if ($request_uri === '/' || $request_uri === '') {
         http_response_code(404);
         echo "404 Not Found";
     }
+} catch (Throwable $e) {
+    http_response_code(500);
+    echo "<h1>PHP Error!</h1>";
+    echo "<p><strong>Message:</strong> " . $e->getMessage() . "</p>";
+    echo "<p><strong>File:</strong> " . $e->getFile() . " (Line " . $e->getLine() . ")</p>";
 }
